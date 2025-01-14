@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <title>Setup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- exo 1 <a-scene>
+      <a-box position="0 0.5 -5" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.5 -5" radius="0.5" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="0 2.5 -5" radius="0.5" rotation="90 0 -30" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-camera position="0 1.5 5"></a-camera>
+    </a-scene> -->
+
+    <!-- exo 2 -->
+
+    <!-- <a-scene>
+        <a-asset>
+            <img id="groundTexture" src="/assets/Moon_texture.jpg" alt="">
+            <img id="normal" src="/assets/normal.jpg" alt="">
+            <img id="sky" src="assets/sky.jpg" alt="">
+        </a-asset>
+
+        <a-sphere 
+            id="moon" 
+            segments-height="53"
+            segments-width="53" 
+            position="0 0 -5" 
+            material="src: #groundTexture; normalMap: #normal" 
+            radius="2" 
+            color="#FFFF" 
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000 easing: linear">
+        </a-sphere>
+        
+        <a-entity 
+            light="type: directional; color: #ff00ff; target: #moon; intensity: 1" 
+            position="1 0 1">
+        </a-entity>
+
+        <a-entity 
+            light="type: directional; color: #ffef; target: #moon; intensity: 1" position="-1 0 1">
+        </a-entity>
+
+        <a-entity 
+            geometry="primitive:sphere; radius:.15"
+            material="color: #fff; shader: flat"
+            light="color:#fff; distance: 120">
+        </a-entity>
+
+        <a-sky src="#sky"></a-sky>
+        
+        <a-camera position="0 0 5"></a-camera>
+    </a-scene> -->
+
+<!-- Exo 3 -->
+
+  <a-scene
+    fog="type: linear; color: #01766D; near: 1; far: 5"
+  >
+
+    <a-asset>
+
+      <a-asset-item id="table" src="/assets/modern_table.glb"></a-asset-item>
+      <a-asset-item id="chaise" src="/assets/barstool.glb"></a-asset-item>
+      <a-asset-item id="bouteille" src="/assets/wine_bottle.glb"></a-asset-item>
+      <a-asset-item id="shot" src="/assets/shot_glass.glb"></a-asset-item>
+    
+    </a-asset>
+
+    <a-entity
+    color="#00FFD3"
+    geometry="primitive: sphere; radius: 0.5" 
+    light="type: ambient; color: #00FFD3; intensity: 3"
+    position="0 5 0"
+    
+    ></a-entity>
+
+    <!-- table -->
+    <a-entity 
+      gltf-model="#table"
+      shadow="receive: true"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="1.5 1.5 1.5"
+    >
+    </a-entity>
+
+    <!-- Bouteille -->
+    <a-entity 
+      gltf-model="#bouteille"
+      shadow="receive: true"
+      position="0 1.22 1"
+      rotation="0 0 0"
+      scale="1.5 1.5 1.5"
+    >
+    </a-entity>
+
+    <!-- Shot -->
+    <a-entity 
+      gltf-model="#shot"
+      shadow="receive: true"
+      position="0.23 1.22 1"
+      rotation="0 0 0"
+      scale="1.5 1.5 1.5"
+    >
+    </a-entity>
+
+    <!-- chaise n°1 -->
+    <a-entity 
+      gltf-model="#chaise"
+      shadow="receive: true"
+      position="-0.5 0 2"
+      rotate="0 180 0"
+      scale="1.5 1.5 1.5"
+    >
+    </a-entity>
+
+    <!-- chaise n°2 -->
+    <a-entity 
+      gltf-model="#chaise"
+      shadow="receive: true"
+      position="0 0 2"
+      rotate="0 180 0"
+      scale="1.5 1.5 1.5"
+    >
+    </a-entity> 
+
+    <!-- chaise n°3 -->
+    <a-entity 
+      gltf-model="#chaise"
+      shadow="receive: true"
+      position="0.5 0 2"
+      rotate="0 180 0"
+      scale="1.5 1.5 1.5"
+    >
+    </a-entity> 
+
+
+
+    <a-plane 
+    position="0 0 0" 
+    rotation="-90 0 0" 
+    width="100" 
+    height="100" 
+    color="#1f1f1f"></a-plane>
+
+    <a-sky
+      color="#01766D"
+    ></a-sky>
+
+    <a-camera
+      position="0 1.7 4"
+    ></a-camera>
+
+  </a-scene>
+
+
+  </body>
+</html>
