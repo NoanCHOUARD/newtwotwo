@@ -138,7 +138,7 @@
     </a-entity> 
 
 
-
+    <!-- Sol -->
     <a-plane 
     position="0 0 0" 
     rotation="-90 0 0" 
@@ -146,13 +146,22 @@
     height="100" 
     color="#1f1f1f"></a-plane>
 
+    <!-- Ciel -->
     <a-sky
       color="#01766D"
     ></a-sky>
 
-    <a-camera
+    <!-- Camera -->
+
+    <a-entity id="rig">
+      <a-entity camera look-controls wasd-controls position="0 1.7 4">
+      </a-entity>
+    </a-entity>
+
+    <!-- <a-camera
+      id="rig"
       position="0 1.7 4"
-    ></a-camera>
+    ></a-camera> -->
 
   </a-scene>
 
