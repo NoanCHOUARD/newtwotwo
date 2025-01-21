@@ -62,105 +62,147 @@
 
 <!-- Exo 3 -->
 
+<!-- fog="type: linear; color: #01766D; near: 1; far: 5" -->
   <a-scene
-    fog="type: linear; color: #01766D; near: 1; far: 5"
+    
   >
 
     <a-asset>
+      
+      <a-asset-item id="cycle" src="./assets/standard_lightcycle__tron_evoluton_battle_grids.glb"></a-asset-item>
+      <a-asset-item id="car" src="./assets/light_runner_v1__tron_evolution_battle_grids.glb"></a-asset-item>
+      <a-asset-item id="disk" src="./assets/tron_legacy_identity_disc.glb"></a-asset-item>
+      <a-asset-item id="chara" src="./assets/tron_character.glb"></a-asset-item>
 
-      <a-asset-item id="table" src="./assets/modern_table.glb"></a-asset-item>
-      <a-asset-item id="chaise" src="./assets/barstool.glb"></a-asset-item>
-      <a-asset-item id="bouteille" src="./assets/wine_bottle.glb"></a-asset-item>
-      <a-asset-item id="shot" src="./assets/shot_glass.glb"></a-asset-item>
-    
+      <a-asset-item id="socle-obj1" src="/assets/socle1.obj"></a-asset-item>
+      <a-asset-item id="socle-mtl1" src="/assets/socle1.mtl"></a-asset-item>
+
+      <a-asset-item id="socle-obj2" src="/assets/socle2.obj"></a-asset-item>
+      <a-asset-item id="socle-mtl2" src="/assets/socle2.mtl"></a-asset-item>
+
+      <audio id="music" src="/assets/Smooth and Cool - Nico Staf.mp3" preload="auto"></audio>
+      
     </a-asset>
 
+    <!-- Musique -->
+
+    <a-sound
+      src="/assets/Smooth and Cool - Nico Staf.mp3" autoplay="true" loop="true" volume="0.1">
+    </a-sound>
+
+    <!-- Lumière -->
     <a-entity
     color="#00FFD3"
     geometry="primitive: sphere; radius: 0.5" 
     light="type: ambient; color: #00FFD3; intensity: 3"
     position="0 5 0"
+  
+    >
+    </a-entity>
+
+    <!-- environnement -->
+
+    <a-entity
+      environment="
+      gridColor: #F3FBFD; 
+      grid: 1x1; 
+      dressing: towers; 
+      horizonColor: #2394a0; 
+      skyColor: #040b07; 
+      dressingColor: #535353; 
+      seed: 44; 
+      active: true; 
+      skyType: gradient; 
+      lightPosition: [object Object]; 
+      fog: 0.8; 
+      ground: spikes; 
+      groundYScale: 4.91; 
+      groundColor: #000; 
+      dressingAmount: 5; 
+      dressingScale: 15; 
+      dressingVariance: [object Object]; 
+      preset: tron
+      ">
+    </a-entity>
+
+    <!-- Ligne -->
+    <a-box
+      position="0 0.01 0"
+      width="0.1"
+      height="0.1"
+      depth="25"
+      color="#F3FBFD"
+      >
+    </a-box>
+
+   <!-- Sol  -->
+    <a-plane
+      position="0 0.01 0"
+      rotation="-90 0 0"
+      width="26"
+      height="26"
+      color="red"
+      >
+    </a-plane>
     
-    ></a-entity>
+    <!-- <a-obj-model src="#socle-obj2" mtl="#socle-mtl2" position="0 0 0" scale="1 1 1"></a-obj-model> -->
 
-    <!-- table -->
-    <a-entity 
-      gltf-model="#table"
-      shadow="receive: true"
-      position="0 0 0"
-      rotation="0 0 0"
-      scale="1.5 1.5 1.5"
-    >
+    <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+    <a-obj-model src="socle.obj" mtl="socle.mtl"></a-obj-model>
+
+
+    <!-- Disque -->
+
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="9 -0.1 9"></a-obj-model>
+
+    <a-entity
+      gltf-model="#disk"
+      position="9 1.5 9"
+      scale="0.4 0.4 0.4"
+      rotation="35 -120 5"
+      animdisk="speed: 20"
+      >
     </a-entity>
 
-    <!-- Bouteille -->
-    <a-entity 
-      gltf-model="#bouteille"
-      shadow="receive: true"
-      position="0 1.22 1"
-      rotation="0 0 0"
-      scale="1.5 1.5 1.5"
-    >
-    </a-entity>
-
-    <!-- Shot -->
-    <a-entity 
-      gltf-model="#shot"
-      shadow="receive: true"
-      position="0.23 1.22 1"
-      rotation="0 0 0"
-      scale="1.5 1.5 1.5"
-    >
-    </a-entity>
-
-    <!-- chaise n°1 -->
-    <a-entity 
-      gltf-model="#chaise"
-      shadow="receive: true"
-      position="-0.5 0 2"
-      rotate="0 180 0"
-      scale="1.5 1.5 1.5"
-    >
-    </a-entity>
-
-    <!-- chaise n°2 -->
-    <a-entity 
-      gltf-model="#chaise"
-      shadow="receive: true"
-      position="0 0 2"
-      rotate="0 180 0"
-      scale="1.5 1.5 1.5"
-    >
-    </a-entity> 
-
-    <!-- chaise n°3 -->
-    <a-entity 
-      gltf-model="#chaise"
-      shadow="receive: true"
-      position="0.5 0 2"
-      rotate="0 180 0"
-      scale="1.5 1.5 1.5"
-    >
-    </a-entity> 
-
+    <!-- Personnage -->
     
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="-9 -0.1 -9" scale="1 1 1"></a-obj-model>
 
-    <!-- Sol -->
-    <a-plane 
-    position="0 0 0" 
-    rotation="-90 0 0" 
-    width="100" 
-    height="100" 
-    color="#1f1f1f"></a-plane>
+    <a-entity
+      position="-9 1 -9"
+      rotation="0 35 0"
+      gltf-model="#chara"
+      scale="0.004 0.004 0.004"
+      >
+    </a-entity>
 
-    <!-- Ciel -->
-    <a-sky
-      color="#01766D"
-    ></a-sky>
+    <!-- Moto -->    
+    
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="9 -0.1 -9" scale="1 1 1"></a-obj-model>
+
+    <a-entity
+      position="9 0.5 -9"
+      rotation="0 -135 0"
+      gltf-model="#cycle"
+      scale="0.2 0.2 0.2"
+      >
+    </a-entity>
+
+    <!-- Voiture -->
+    
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="-9 -0.1 9" scale="1 1 1"></a-obj-model>
+
+    <a-entity
+      position="-9 1.2 9"
+      rotation="0 -145 0"
+      scale="10 10 10"
+      gltf-model="#car"
+      >
+    </a-entity>
 
     <!-- Joueur -->
 
-    <a-entity id="player" position="0 1.6 4">
+    <a-entity id="player" position="0 1.6 0">
       <!-- camera -->
       <a-entity id="camera" camera wasd-controls look-controls></a-entity>
       <!-- hand controls -->
@@ -192,6 +234,58 @@
 
   </a-scene>
 
+  <!-- Script de rotation -->
+
+  <script>
+    // New component anim - doit être placé sur un élément de la scène, avec ou sans valeur.
+    AFRAME.registerComponent("animdisk", {
+      // objet qui définit les propriétés du composant.
+      schema: {
+        // Propriété speed de type number avec une valeur par défaut de 1.
+        speed: { type: "number", default: 1 },
+      },
+      // Fonction appelée ts les x ms.
+      tick: function (time, timeDelta) {
+        // Récupère l'attribut rotation de l'élément.
+        let rotation = this.el.getAttribute("rotation");
+        // Incrémente la valeur y de l'attribut rotation.
+        rotation.y += this.data.speed * (timeDelta / 1000);
+
+        rotation.x += this.data.speed * (timeDelta / 1000);
+
+        let position = this.el.getAttribute("position");
+
+        position.y += Math.sin(time / 1000) * 0.001;
+
+        // Met à jour l'attribut rotation de l'élément.
+        this.el.setAttribute("rotation", rotation,);
+        this.el.setAttribute("position", position);
+      },
+    });
+
+    AFRAME.registerComponent("anim",{
+
+      schema: {
+
+        speed: { type: "number", default: 1 },
+
+      },
+
+      tick: function(time, timeDelta){
+
+        let rotation = this.el.getAttribute("rotation");
+
+        rotation.y += this.data.speed * (timeDelta / 1000);
+
+        let position = this.el.getAttribute("position");
+
+        this.el.setAttribute("rotation", rotation);
+
+      }
+
+    })
+
+  </script>
 
   </body>
 </html>
