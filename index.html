@@ -98,12 +98,6 @@
       
     </a-asset>
 
-    <!-- Musique -->
-
-    <a-sound
-      src="./assets/Smooth and Cool - Nico Staf.mp3" autoplay="true" loop="true" volume="0.5">
-    </a-sound>
-
     <!-- Lumière -->
     <!-- <a-entity
     color="#00FFD3"
@@ -135,6 +129,13 @@
       fog: 0.8;
       dressingVariance: 0.5;
       ">
+
+      <!-- Musique -->
+
+    <a-sound
+          src="./assets/Smooth and Cool - Nico Staf.mp3" autoplay="true" loop="true" volume="0.5">
+    </a-sound>
+
     </a-entity>
 
     <!-- Bat1 -->
@@ -211,21 +212,21 @@
 
     <!-- Avion 1 -->
     <a-entity
-        id="cible1"
         gltf-model="#avion1"
         position="50 0 35"
         scale="0.01 0.01 0.01"
         flying="speed: 0.5"
-        class="clickable"
       >
     </a-entity>
 
     <!-- Avion 2 -->
     <a-entity
+        id="cible1"
         gltf-model="#avion1"
         position="50 2 35"
         scale="0.01 0.01 0.01"
         rotation="0 45 0"
+        class="clickable"
       >
     </a-entity>
 
@@ -747,7 +748,7 @@
       <a-entity
         id="right-hand"
         oculus-touch-controls="hand: right"
-        raycaster="objects: .clickable; far: 10; showLine: true"
+        raycaster="objects: .clickable; far: 15; showLine: true"
       ></a-entity>
     </a-entity>
 
