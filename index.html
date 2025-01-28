@@ -239,9 +239,14 @@
       >
     </a-entity>
 
-    <!--Moto anim -->
+    <!--Anim text -->
 
-
+    <a-entity
+        id="introText"
+        text="value: Explorez et cherchez les 4 objets de l'univers de TRON. Cliquez sur les éléments avec le curseur pour faire apparaitre les sphères d'énergies.; color: #F3FBFD; width: 6"
+        position="0 2 -5"
+        opacity-fade="duration: 5000"
+      ></a-entity>
 
     <!-- Ligne 1 -->
     <a-box
@@ -895,6 +900,32 @@ AFRAME.registerComponent("interactable", {
           });
         },
       });
+
+      // Opacité du texte
+      AFRAME.registerComponent("opacity-fade", {
+        schema: {
+          duration: { type: "number", default: 10000 }
+        },
+        init: function () {
+          this.startTime = null;
+        },
+        tick: function (time, timeDelta) {
+          if (!this.startTime) {
+            this.startTime = time;
+          }
+
+          const elapsed = time - this.startTime;
+          const opacity = 1 - elapsed / this.data.duration;
+
+          if (opacity <= 0) {
+            this.el.setAttribute("visible", "false");
+            this.el.removeAttribute("opacity-fade");
+          } else {
+            this.el.setAttribute("text", "opacity", opacity);
+          }
+        }
+      });
+
 
   </script>
 
