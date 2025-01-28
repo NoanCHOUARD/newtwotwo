@@ -128,14 +128,9 @@
       groundColor: #000;
       fog: 0.8;
       dressingVariance: 0.5;
-      ">
-
-      <!-- Musique -->
-
-    <a-sound
-          src="./assets/Smooth and Cool - Nico Staf.mp3" autoplay="true" loop="true" volume="0.5">
-    </a-sound>
-
+      "
+      sound="src: #music; autoplay: true; loop: true; volume: 0.5"
+      >
     </a-entity>
 
     <!-- Bat1 -->
@@ -533,7 +528,6 @@
       position="12 8 12"
       radius="1"
       color="#ff7f00"
-      interactable
       >
     </a-sphere>
 
@@ -881,11 +875,11 @@ AFRAME.registerComponent("interactable", {
           // Add event listener for the laser interaction
           // Change the color of the box on hover
           this.el.addEventListener("mouseenter", () => {
-            this.el.setAttribute("scale","0.03 0.03 0.03"); // Visual feedback
+            this.el.setAttribute("scale", "0.03 0.03 0.03"); // Visual feedback
           });
           // Reset the color on mouse leave
           this.el.addEventListener("mouseleave", () => {
-            this.el.setAttribute("scale","0.01 0.01 0.01");
+            this.el.setAttribute("scale", "0.01 0.01 0.01"); // Reset color
           });
 
           // Add event listener for the click interaction
