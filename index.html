@@ -79,9 +79,12 @@
 
       <!-- Objets -->
       <a-asset-item id="cycle" src="./assets/standard_lightcycle__tron_evoluton_battle_grids.glb"></a-asset-item>
+      <a-asset-item id="cyleorange" src="./assets/moto-orange-test.glb"></a-asset-item>
       <a-asset-item id="car" src="./assets/light_runner_v1__tron_evolution_battle_grids.glb"></a-asset-item>
       <a-asset-item id="disk" src="./assets/tron_legacy_identity_disc.glb"></a-asset-item>
       <a-asset-item id="chara" src="./assets/tron_character.glb"></a-asset-item>
+      <a-asset-item id="avion1" src="./assets/one_man_light_jet_tron.glb"></a-asset-item>
+      <a-asset-item id="avion2" src="./assets/three_man_light_jet_tron.glb"></a-asset-item>
 
       <!-- Socle -->
       <a-asset-item id="socle-obj1" src="./assets/socle1.obj"></a-asset-item>
@@ -122,6 +125,7 @@
       gridColor: #F3FBFD;
       horizonColor: #055373; 
       skyColor: #040b07; 
+      stageSize: 200;
       seed: 44;
       skyType: gradient;
       lightPosition: 0 20 0;
@@ -133,12 +137,122 @@
       ">
     </a-entity>
 
-    <!-- batiment 1 -->
+    <!-- Bat1 -->
 
-    <a-entity 
-      object-generator="count: 5; width: 100; height: 100; exclusionZone: {x: 0, z: 0, radius: 35};"
+    <a-entity
+      gltf-model="#bat1"
+      position="50 -0.5 -50"
+      scale="0.4 0.4 0.4"
       >
     </a-entity>
+
+    <a-entity
+      gltf-model="#bat1"
+      position="20 -0.5 -60"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <a-entity
+      gltf-model="#bat1"
+      position="50 -0.5 -80"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <a-entity
+      gltf-model="#cycle"
+      position="0 2 0"
+      scale="0.4 0.4 0.4"
+      material="color: #FFA500"
+      >
+    </a-entity>
+
+    <!-- Bat2 -->
+    
+    <a-entity
+      gltf-model="#bat2"
+      position="-50 -0.5 50"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <!-- Bat3 -->
+    <a-entity
+      gltf-model="#bat3"
+      position="50 -0.5 50"
+      rotation="0 90 0"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <!-- Bat4 -->
+    <a-entity
+      gltf-model="#bat4"
+      position="-50 -0.5 -50"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <!-- Bat5 -->
+    <a-entity
+      gltf-model="#bat5"
+      position="35 -0.5 35"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+      
+    <a-entity
+      gltf-model="#bat5"
+      position="65 -0.5 35"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <!-- Avion 1 -->
+    <a-entity
+        id="cible1"
+        gltf-model="#avion1"
+        position="50 0 35"
+        scale="0.01 0.01 0.01"
+        flying="speed: 0.5"
+        class="clickable"
+      >
+    </a-entity>
+
+    <!-- Avion 2 -->
+    <a-entity
+        gltf-model="#avion1"
+        position="50 2 35"
+        scale="0.01 0.01 0.01"
+        rotation="0 45 0"
+      >
+    </a-entity>
+
+    <!-- Avion 3 -->
+
+    <a-entity
+        gltf-model="#avion2"
+        position="0 30 0"
+        scale="0.01 0.01 0.01"
+        flyingtwo="speed: 0.5"
+      >
+    </a-entity>
+
+    <!-- Avion 4 -->
+
+    <a-entity
+        gltf-model="#avion2"
+        position="0 32 0"
+        scale="0.01 0.01 0.01"
+        rotation="0 45 0"
+        flyingthree="speed: 1"
+      >
+    </a-entity>
+
+    <!--Moto anim -->
+
+
 
     <!-- Ligne 1 -->
     <a-box
@@ -191,29 +305,344 @@
       >
     </a-plane>
 
-    <a-circle
-      position="9 0.04 9"
-      rotation="-90 0 0"
-      radius="1"
-      color="#F3FBFD">
-    </a-circle>
+    <!-- Porte 1 -->
+    <a-entity
+      gltf-model="#bat3"
+      position="0 -0.5 -13"
+      rotation="0 90 0"
+      scale="0.2 0.2 0.2"
+      >
+    </a-entity>
     
+    <!-- Porte 2 -->
+    <a-entity
+      gltf-model="#bat3"
+      position="0 -0.5 13"
+      rotation="0 -90 0"
+      scale="0.2 0.2 0.2"
+      >
+    </a-entity>
+
+    <!-- Porte 3 -->
+    <a-entity
+      gltf-model="#bat3"
+      position="12.5 -0.5 0"
+      rotation="0 180 0"
+      scale="0.2 0.2 0.2"
+      >
+    </a-entity>
+
+    <!-- Porte 4 -->
+    <a-entity
+      gltf-model="#bat3"
+      position="-12.5 -0.5 0"
+      rotation="0 0 0"
+      scale="0.2 0.2 0.2"
+      >
+    </a-entity>
+
+    <!-- Mur 1 -->
+
+    <a-box
+      position="8 0.5 -12"
+      width="10"
+      height="10"
+      depth="0.2"
+      color="#55E2DB"
+      
+      >
+    </a-box>
+
+    <a-box
+      position="8 0.5 -12"
+      width="10"
+      height="8"
+      depth="0.6"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Mur 2 -->
+
+    <a-box
+      position="8 0.5 12"
+      width="10"
+      height="10"
+      depth="0.2"
+      color="#55E2DB"
+      
+      >
+    </a-box>
+
+    <a-box
+      position="8 0.5 12"
+      width="10"
+      height="8"
+      depth="0.6"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Mur 3 -->
+
+    <a-box
+      position="12 0.5 8"
+      width="0.2"
+      height="10"
+      depth="10"
+      color="#55E2DB"
+      
+      >
+    </a-box>
+
+    <a-box
+      position="12 0.5 8"
+      width="0.6"
+      height="8"
+      depth="10"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Mur 4 -->
+
+    <a-box
+      position="-12 0.5 8"
+      width="0.2"
+      height="10"
+      depth="10"
+      color="#55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="-12 0.5 8"
+      width="0.6"
+      height="8"
+      depth="10"
+      color="#000"
+      >
+    </a-box>
+    
+    <!-- Mur 5 -->
+
+    <a-box
+      position="-8 0.5 12"
+      width="0.2"
+      height="10"
+      depth="10"
+      rotation="0 90 0"
+      color="#55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="-8 0.5 12"
+      width="0.6"
+      height="8"
+      depth="10"
+      rotation="0 90 0"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Mur 6 -->
+
+    <a-box
+      position="-8 0.5 -12"
+      width="0.2"
+      height="10"
+      depth="10"
+      rotation="0 90 0"
+      color="#55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="-8 0.5 -12"
+      width="0.6"
+      height="8"
+      depth="10"
+      rotation="0 90 0"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Mur 7 -->
+
+    <a-box
+      position="12 0.5 -8"
+      width="0.2"
+      height="10"
+      depth="10"
+      rotation="0 180 0"
+      color="#55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="12 0.5 -8"
+      width="0.6"
+      height="8"
+      depth="10"
+      rotation="0 180 0"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Mur 8 -->
+
+    <a-box
+      position="-12 0.5 -8"
+      width="0.2"
+      height="10"
+      depth="10"
+      rotation="0 180 0"
+      color="#55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="-12 0.5 -8"
+      width="0.6"
+      height="8"
+      depth="10"
+      rotation="0 180 0"
+      color="#000"
+      >
+    </a-box>
+
+    <!-- Tour 1 -->
+
+    <a-box
+      position="12 0.5 12"
+      width="3.5"
+      height="11"
+      depth="3.5"
+      color="#55E2DB"
+      light="type: ambient; color: #55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="12 0.5 12"
+      width="3.8"
+      height="8"
+      depth="3.8"
+      color="#000"
+      >
+    </a-box>
+
+    <a-sphere
+      data-cible="cible1"
+      visible="false"
+      position="12 8 12"
+      radius="1"
+      color="#ff7f00"
+      interactable
+      >
+    </a-sphere>
+
+    <!-- Tour 2 -->
+     
+    <a-box
+      position="-12 0.5 12"
+      width="3.5"
+      height="11"
+      depth="3.5"
+      color="#55E2DB"
+      light="type: ambient; color: #55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="-12 0.5 12"
+      width="3.8"
+      height="8"
+      depth="3.8"
+      color="#000"
+      >
+    </a-box>
+
+    <a-sphere
+      position="-12 8 12"
+      radius="1"
+      color="#55E2DB"
+      >
+    </a-sphere>
+
+    <!-- Tour 3 -->
+
+    <a-box
+      position="12 0.5 -12"
+      width="3.5"
+      height="11"
+      depth="3.5"
+      color="#55E2DB"
+      light="type: ambient; color: #55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="12 0.5 -12"
+      width="3.8"
+      height="8"
+      depth="3.8"
+      color="#000"
+      >
+    </a-box>
+
+    <a-sphere
+      position="12 8 -12"
+      radius="1"
+      color="#55E2DB"
+      >
+    </a-sphere>
+
+    <!-- Tour 4 -->
+
+    <a-box
+      position="-12 0.5 -12"
+      width="3.5"
+      height="11"
+      depth="3.5"
+      color="#55E2DB"
+      light="type: ambient; color: #55E2DB"
+      >
+    </a-box>
+
+    <a-box
+      position="-12 0.5 -12"
+      width="3.8"
+      height="8"
+      depth="3.8"
+      color="#000"
+      >
+    </a-box>
+
+    <a-sphere
+      position="-12 8 -12"
+      radius="1"
+      color="#55E2DB"
+      >
+    </a-sphere>
+
     <!-- <a-obj-model src="#socle-obj2" mtl="#socle-mtl2" position="0 0 0" scale="1 1 1"></a-obj-model> -->
      
     <!-- Disque -->
 
     <a-circle
-      position="9 0.04 9"
+      position="8 0.04 8"
       rotation="-90 0 0"
       radius="1"
       color="#F3FBFD">
     </a-circle>
 
-    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="9 -0.1 9"></a-obj-model>
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="8 -0.1 8"></a-obj-model>
 
     <a-entity
       gltf-model="#disk"
-      position="9 1.5 9"
+      position="8 1.5 8"
       scale="0.4 0.4 0.4"
       rotation="35 -120 5"
       animdisk="speed: 20"
@@ -223,16 +652,16 @@
     <!-- Personnage -->
 
     <a-circle
-      position="-9 0.04 -9"
+      position="-8 0.04 -8"
       rotation="-90 0 0"
       radius="1"
       color="#F3FBFD">
     </a-circle>
     
-    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="-9 -0.1 -9" scale="1 1 1"></a-obj-model>
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="-8 -0.1 -8" scale="1 1 1"></a-obj-model>
 
     <a-entity
-      position="-9 1 -9"
+      position="-8 1 -8"
       rotation="0 35 0"
       gltf-model="#chara"
       scale="0.004 0.004 0.004"
@@ -243,16 +672,16 @@
     <!-- Moto -->  
      
     <a-circle
-      position="9 0.04 -9"
+      position="8 0.04 -8"
       rotation="-90 0 0"
       radius="1"
       color="#F3FBFD">
     </a-circle>
     
-    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="9 -0.1 -9" scale="1 1 1"></a-obj-model>
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="8 -0.1 -8" scale="1 1 1"></a-obj-model>
 
     <a-entity
-      position="9 0.5 -9"
+      position="8 0.5 -8"
       rotation="0 -135 0"
       gltf-model="#cycle"
       scale="0.2 0.2 0.2"
@@ -263,16 +692,16 @@
     <!-- Voiture -->
 
     <a-circle
-      position="-9 0.04 9"
+      position="-8 0.04 8"
       rotation="-90 0 0"
       radius="1"
       color="#F3FBFD">
     </a-circle>
     
-    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="-9 -0.1 9" scale="1 1 1"></a-obj-model>
+    <a-obj-model src="#socle-obj1" mtl="#socle-mtl1" position="-8 -0.1 8" scale="1 1 1"></a-obj-model>
 
     <a-entity
-      position="-9 1.2 9"
+      position="-8 1.2 8"
       rotation="0 -145 0"
       scale="10 10 10"
       gltf-model="#car"
@@ -322,26 +751,13 @@
       ></a-entity>
     </a-entity>
 
-    <!-- Camera new -->
-    <!-- <a-entity id="rig">
-      <a-entity camera look-controls wasd-controls position="0 1.7 4">
-      </a-entity>
-    </a-entity> -->
-
-    <!-- Ancienne camera -->
-    <!-- <a-camera
-      position="0 1.7 4"
-    ></a-camera> -->
-
-    <!-- Environnement -->
-    <!-- <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
-
   </a-scene>
 
   <!-- Script de rotation -->
 
   <script>
-    // New component anim - doit être placé sur un élément de la scène, avec ou sans valeur.
+    
+    // Script de rotation du disque
     AFRAME.registerComponent("animdisk", {
       // objet qui définit les propriétés du composant.
       schema: {
@@ -367,6 +783,7 @@
       },
     });
 
+    // Script de rotation des objets
     AFRAME.registerComponent("anim",{
 
       schema: {
@@ -389,66 +806,107 @@
 
     })
 
-    // Script de placement aléatoire de bat1
-    
-    AFRAME.registerComponent('object-generator', {
-    schema: {
-      count: { type: 'int', default: 10 }, // Nombre d'objets
-      width: { type: 'number', default: 10 }, // Largeur de la zone
-      height: { type: 'number', default: 10 }, // Hauteur de la zone
-      exclusionZone: { type: 'vec3', default: { x: 0, z: 0, radius: 5 } }, // Zone d'exclusion
-      minDistance: { type: 'number', default: 2 } // Distance minimale entre les objets
-    },
-    init: function () {
-      const data = this.data;
-      const positions = [];
-      const models = ['#bat1', '#bat2', '#bat3', '#bat4', '#bat5']; // Liste des modèles 3D
+    AFRAME.registerComponent("flying", {
+  schema: {
+    speed: { type: "number", default: 1 },
+  },
+  tick: function (time, timeDelta) {
+    let position = this.el.getAttribute("position");
+    let rotation = this.el.getAttribute("rotation");
 
-      for (let i = 0; i < data.count; i++) {
-        let position;
-        let isValidPosition = false;
-        while (!isValidPosition) {
-          position = this.getRandomPosition(data.width, data.height, data.exclusionZone); 
-          isValidPosition = this.isValidPosition(position, positions, data.minDistance);
-        }
-        positions.push(position);
+    // Mouvement de vol en cercle autour de la position initiale
+    const initialX = 50;
+    const initialZ = 35;
+    position.x = initialX + Math.sin(time / 1000 * this.data.speed) * 10;
+    position.z = initialZ + Math.cos(time / 1000 * this.data.speed) * 10;
 
-        const entity = document.createElement('a-entity'); // Création de l'entité
-        const randomModel = models[Math.floor(Math.random() * models.length)]; // Sélection aléatoire du modèle
-        const randomRotation = this.getRandomRotation(); // Génération d'une rotation aléatoire
-        entity.setAttribute('position', position); // Position aléatoire
-        entity.setAttribute('gltf-model', randomModel); // Utilisation du modèle 3D aléatoire
-        entity.setAttribute('rotation', randomRotation); // Rotation aléatoire
-        entity.setAttribute('scale', '0.5 0.5 0.5'); 
-        this.el.appendChild(entity);
-      }
-    },
-    getRandomPosition: function (width, height, exclusionZone) { // Génère une position aléatoire
-      let x, z;
-      do {
-        x = Math.random() * width - width / 2;
-        z = Math.random() * height - height / 2;
-      } while (Math.sqrt((x - exclusionZone.x) ** 2 + (z - exclusionZone.z) ** 2) < exclusionZone.radius);
-      return { x: x, y: 0.5, z: z };
-    },
-    getRandomRotation: function () { // Génère une rotation aléatoire
-      const yRotation = Math.random() * 360; // Rotation aléatoire autour de l'axe Y
-      return { x: 0, y: yRotation, z: 0 };
-    },
-    isValidPosition: function (position, positions, minDistance) { // Vérifie si la position est valide
-      for (let i = 0; i < positions.length; i++) {
-        const existingPosition = positions[i];
-        const distance = Math.sqrt(
-          (position.x - existingPosition.x) ** 2 +
-          (position.z - existingPosition.z) ** 2
-        );
-        if (distance < minDistance) {
-          return false;
-        }
-      }
-      return true;
-    }
-  });
+    // Mouvement de haut en bas
+    position.y = 40 + Math.sin(time / 1000 * this.data.speed) * 10;
+
+    // Rotation pour simuler le vol
+    rotation.y = (time / 1000 * this.data.speed * 180 / Math.PI) % 360;
+
+    this.el.setAttribute("position", position);
+    this.el.setAttribute("rotation", rotation);
+  },
+});
+
+AFRAME.registerComponent("flyingtwo", {
+  schema: {
+    speed: { type: "number", default: 1 },
+  },
+  tick: function (time, timeDelta) {
+    let position = this.el.getAttribute("position");
+    let rotation = this.el.getAttribute("rotation");
+
+    // Mouvement de vol en cercle autour de la position initiale
+    const initialX = 0;
+    const initialZ = 0;
+    position.x = initialX + Math.sin(time / 1000 * this.data.speed) * 50;
+    position.z = initialZ + Math.cos(time / 1000 * this.data.speed) * 50;
+
+    // Mouvement de haut en bas
+    position.y = 20 + Math.sin(time / 1000 * this.data.speed) * 10;
+
+    // Rotation pour simuler le vol
+    rotation.y = (time / 1000 * this.data.speed * 180 / Math.PI) % 360;
+
+    this.el.setAttribute("position", position);
+    this.el.setAttribute("rotation", rotation);
+  },
+});
+
+AFRAME.registerComponent("flyingthree", {
+  schema: {
+    speed: { type: "number", default: 1 },
+  },
+  tick: function (time, timeDelta) {
+    let position = this.el.getAttribute("position");
+    let rotation = this.el.getAttribute("rotation");
+
+    // Mouvement de vol en cercle autour de la position initiale
+    const initialX = 0;
+    const initialZ = 0;
+    position.x = initialX + Math.sin(time / 1000 * this.data.speed) * 50;
+    position.z = initialZ + Math.cos(time / 1000 * this.data.speed) * 50;
+
+    // Mouvement de haut en bas
+    position.y = 18 + Math.sin(time / 1000 * this.data.speed) * 10;
+
+    // Rotation pour simuler le vol
+    rotation.y = (time / 1000 * this.data.speed * 180 / Math.PI) % 360;
+
+    this.el.setAttribute("position", position);
+    this.el.setAttribute("rotation", rotation);
+  },
+});
+
+// interaction avec les objets
+AFRAME.registerComponent("interactable", {
+        init: function () {
+          // Add event listener for the laser interaction
+          // Change the color of the box on hover
+          this.el.addEventListener("mouseenter", () => {
+            this.el.setAttribute("scale","0.03 0.03 0.03"); // Visual feedback
+          });
+          // Reset the color on mouse leave
+          this.el.addEventListener("mouseleave", () => {
+            this.el.setAttribute("scale","0.01 0.01 0.01");
+          });
+
+          // Add event listener for the click interaction
+          this.el.addEventListener("click", () => {
+            // Get the target entity
+            const target = document.querySelector(
+              `#${this.el.getAttribute("data-cible")}`
+            );
+            // la cible devient visibility
+            target.setAttribute("visible", "true");
+
+            console.log(target);
+          });
+        },
+      });
 
   </script>
 
