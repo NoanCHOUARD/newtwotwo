@@ -79,9 +79,16 @@
       <!-- Objets -->
       <a-asset-item id="cycle" src="./assets/standard_lightcycle__tron_evoluton_battle_grids.glb"></a-asset-item>
       <a-asset-item id="cyleorange" src="./assets/moto-orange-test.glb"></a-asset-item>
+      
       <a-asset-item id="car" src="./assets/light_runner_v1__tron_evolution_battle_grids.glb"></a-asset-item>
+      
       <a-asset-item id="disk" src="./assets/tron_legacy_identity_disc.glb"></a-asset-item>
+      <a-asset-item id="diskorange" src="./assets/disk-orange.glb"></a-asset-item>
+      <a-asset-item id="diskgreen" src="./assets/disk-green.glb"></a-asset-item>
+      <a-asset-item id="diskpurple" src="./assets/disk-purple.glb"></a-asset-item>
+      
       <a-asset-item id="chara" src="./assets/tron_character.glb"></a-asset-item>
+      
       <a-asset-item id="avion1" src="./assets/one_man_light_jet_tron.glb"></a-asset-item>
       <a-asset-item id="avion2" src="./assets/three_man_light_jet_tron.glb"></a-asset-item>
 
@@ -207,6 +214,8 @@
       rotation="0 135 0"
       gltf-model="#cycle"
       scale="0.2 0.2 0.2"
+      data-hover-scale="0.22 0.22 0.22"
+      data-light-color="#F3FBFD"
       rotating-around="center: 50.160 0 -66.216; radius: 12; speed: 1.4"
       class="clickable"
       data-cible="cible2"
@@ -226,12 +235,8 @@
 
     <!-- Bat2 -->
     
-    <a-entity
-      gltf-model="#bat2"
-      position="-50 -0.5 50"
-      scale="0.4 0.4 0.4"
-      >
-    </a-entity>
+    
+
 
     <!-- Bat3 -->
     <a-entity
@@ -245,10 +250,132 @@
     <!-- Bat4 -->
     <a-entity
       gltf-model="#bat4"
-      position="-50 -0.5 -50"
+      position="-50 -0.5 -32.190"
       scale="0.4 0.4 0.4"
       >
     </a-entity>
+
+    <a-entity
+      gltf-model="#bat4"
+      position="-85.583 -0.5 -32.190"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <a-entity
+      gltf-model="#bat4"
+      position="-50 -0.5 -76.780"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <a-entity
+      gltf-model="#bat4"
+      position="-85.583 -0.5 -76.780"
+      scale="0.4 0.4 0.4"
+      >
+    </a-entity>
+
+    <!-- Zone de combat -->
+
+      <a-box 
+        position="-54.06538 0.96366 -56.71039" 
+        width="0.06" 
+        height="0.06" 
+        depth="6" 
+        rotation="0 0 0" 
+        color="#F3FBFD" 
+        geometry="depth: 2; height: 2; width: 2">
+      </a-box>
+
+      <a-box 
+        position="-59.85171 1.77705 -47.37546" 
+        width="0.06" 
+        height="0.06" 
+        depth="6" 
+        rotation="0 0 0" 
+        color="#F3FBFD" 
+        geometry="depth: 2; height: 4; width: 2">
+      </a-box>
+
+      <a-box 
+        position="-74.19477 1.77705 -41.87126" 
+        width="0.06" 
+        height="0.06" 
+        depth="6" 
+        rotation="0 0 0" 
+        color="#F3FBFD" 
+        geometry="depth: 2; height: 4; width: 5">
+      </a-box>
+
+      <a-box 
+        position="-80.25489 4.98139 -52.16522" 
+        width="0.06" 
+        height="0.06" 
+        rotation="0 0 0" 
+        color="#ff7f00" 
+        geometry="depth: 2; height: 10; width: 2">
+      </a-box>
+
+      <a-box 
+        position="-75.47146 0.96366 -62.83942" 
+        width="0.06" 
+        height="0.06" 
+        depth="6" 
+        rotation="0 0 0" 
+        color="#00ff00" 
+        geometry="depth: 2; height: 2; width: 2">
+      </a-box>
+
+      <a-box 
+        position="-62.40056 1.77705 -67.42871" 
+        width="0.06" 
+        height="0.06" 
+        depth="6" 
+        rotation="0 90 0" 
+        color="#8A00C4" 
+        geometry="depth: 2; height: 4; width: 5">
+      </a-box>
+
+      <!-- Disque bleu -->
+      <a-entity
+        gltf-model="#disk"
+        position="-61.286 0.320 -48.1"
+        scale="0.4 0.4 0.4"
+        rotation="35 -120 5"
+        >
+      </a-entity>
+
+      <!-- Disque orange -->
+      <a-entity
+        gltf-model="#diskorange"
+        position="-79.064 0.688 -51.879"
+        scale="0.4 0.4 0.4"
+        rotation="0 0 -75">
+      </a-entity>
+
+      <!-- Disque vert -->
+      <a-entity
+        data-hover-scale="0.45 0.45 0.45"
+        data-light-color="#00ff00"
+        class="clickable"
+        data-cible="cible3"
+        interactable
+        gltf-model="#diskgreen"
+        position="-75.471 0.592 -63.994"
+        scale="0.4 0.4 0.4"
+        rotation="0 90 -75"
+        >
+      </a-entity>
+
+      <!-- Disque violet -->
+      <a-entity
+        gltf-model="#diskpurple"
+        position="-61.221 0.677 -67.429"
+        scale="0.4 0.4 0.4"
+        rotation="0 0 -75"
+        >
+      </a-entity>
 
     <!-- Bat5 -->
     <a-entity
@@ -282,6 +409,8 @@
       position="50 3 35"
       scale="0.01 0.01 0.01"
       rotation="0 45 0"
+      data-hover-scale="0.011 0.011 0.011"
+      data-light-color="#ff7f00"
       interactable
       floating="amplitude: 0.009 speed: 0.009"
       >
@@ -308,13 +437,25 @@
       >
     </a-entity>
 
+    <!-- Voiture active -->
+
+    <a-entity
+      position="-8 0 8"
+      rotation="0 -145 0"
+      scale="10 10 10"
+      gltf-model="#car"
+      rotating-around="center: 0 0 0; radius: 28; speed: 1"
+      >
+    </a-entity>
+
     <!--Anim text -->
 
     <a-entity
         id="introText"
-        text="value: Explorez et cherchez les 4 objets de l'univers de TRON. 
-        Cliquez sur les objets similaires en dehors de la zone avec le curseur, pour faire apparaitre les orbes de couleurs.; color: #55E2DB; width: 7; align: center; wrapCount: 50"
-        position="0 2 -5"
+        text="value: Explorez et cherchez les 3 objets de l'univers de TRON. 
+        Cliquez sur les objets similaires en dehors de la zone avec le curseur, pour faire apparaitre les orbes manquantes de couleurs.; color: #55E2DB; width: 7; align: center; wrapCount: 50"
+        position="0 2 5"
+        rotation="0 180 0"
         opacity-fade="duration: 5000; delay: 15000"
       ></a-entity>
 
@@ -396,6 +537,55 @@
       >
     </a-sphere>
 
+    <!-- Ligne endroit 3 -->
+
+    <a-sphere
+      position="-12.5 0.04 0"
+      radius="0.1"
+      color="#00ff00"
+      >
+    </a-sphere>
+
+    <a-box
+      position="-26.5 0.07 0"
+      width="0.06"
+      height="0.06"
+      depth="28"
+      rotation="0 -90 0"
+      color="#00ff00">
+    </a-box>
+
+    <a-sphere
+      position="-40.482 0.04 0"
+      radius="0.14"
+      color="#00ff00"
+      >
+    </a-sphere>
+
+    <a-box
+      position="-45.763 0.120 -5.291"
+      width="0.06"
+      height="0.06"
+      depth="15"
+      rotation="0 45 0"
+      color="#00ff00">
+    </a-box>
+
+    <a-box 
+      position="-55.497 0.15 -14.997" 
+      width="0.06" 
+      height="0.06" 
+      depth="15" 
+      rotation="0 45 0" 
+      color="#00ff00">
+    </a-box>
+
+    <a-sphere 
+      position="-60.86355 0.18344 -20.33884" 
+      radius="0.14" 
+      color="#00ff00">
+    </a-sphere>
+
    <!-- Sol  -->
     <a-plane
       position="0 0.01 0"
@@ -434,17 +624,8 @@
       scale="0.2 0.2 0.2"
       >
     </a-entity>
-    
-    <!-- Porte 2 -->
-    <a-entity
-      gltf-model="#bat3"
-      position="0 -0.5 13"
-      rotation="0 -90 0"
-      scale="0.2 0.2 0.2"
-      >
-    </a-entity>
 
-    <!-- Porte 3 -->
+    <!-- Porte 2 -->
     <a-entity
       gltf-model="#bat3"
       position="12.5 -0.5 0"
@@ -453,7 +634,7 @@
       >
     </a-entity>
 
-    <!-- Porte 4 -->
+    <!-- Porte 3 -->
     <a-entity
       gltf-model="#bat3"
       position="-12.5 -0.5 0"
@@ -485,35 +666,22 @@
 
     <!-- Mur 2 -->
 
-    <a-box
-      position="8 0.5 12"
-      width="10"
-      height="10"
-      depth="0.2"
-      color="#55E2DB"
-      
-      >
+    <a-box 
+      position="-0.03973 0.5 12" 
+      width="10" 
+      height="10" 
+      depth="0.2" 
+      color="#55E2DB" 
+      geometry="width: 20">
     </a-box>
 
-    <a-box
-      position="8 0.5 12"
-      width="10"
-      height="8"
-      depth="0.6"
-      color="#000"
-      >
-    </a-box>
-
-    <!-- Mur 3 -->
-
-    <a-box
-      position="12 0.5 8"
-      width="0.2"
-      height="10"
-      depth="10"
-      color="#55E2DB"
-      
-      >
+    <a-box 
+      position="-0.04476 0.5 12" 
+      width="10" 
+      height="8" 
+      depth="0.6" 
+      color="#000" 
+      geometry="width: 20">
     </a-box>
 
     <a-box
@@ -640,8 +808,8 @@
       width="3.5"
       height="11"
       depth="3.5"
-      color="#55E2DB"
-      light="type: ambient; color: #55E2DB"
+      color="#ff7f00"
+      light="type: ambient; color: #ff7f00"
       >
     </a-box>
 
@@ -670,8 +838,8 @@
       width="3.5"
       height="11"
       depth="3.5"
-      color="#55E2DB"
-      light="type: ambient; color: #55E2DB"
+      color="#8A00C4"
+      light="type: ambient; color: #8A00C4"
       >
     </a-box>
 
@@ -685,11 +853,9 @@
     </a-box>
 
     <a-sphere
-      id="cible2"
-      visible="false"
       position="-12 8 12"
       radius="1"
-      color="#55E2DB"
+      color="#8A00C4"
       >
     </a-sphere>
 
@@ -715,6 +881,8 @@
     </a-box>
 
     <a-sphere
+      id="cible2"
+      visible="false"
       position="12 8 -12"
       radius="1"
       color="#55E2DB"
@@ -728,8 +896,8 @@
       width="3.5"
       height="11"
       depth="3.5"
-      color="#55E2DB"
-      light="type: ambient; color: #55E2DB"
+      color="#00ff00"
+      light="type: ambient; color: #00ff00"
       >
     </a-box>
 
@@ -743,9 +911,11 @@
     </a-box>
 
     <a-sphere
+      id="cible3"
+      visible="false"
       position="-12 8 -12"
       radius="1"
-      color="#55E2DB"
+      color="#00ff00"
       >
     </a-sphere>
 
@@ -857,7 +1027,7 @@
 
 
     <!-- Joueur -->
-    <a-entity id="player" position="0 1.7 0">
+    <a-entity id="player" position="0 1.7 0" rotation="0 180 0">
       <!-- camera -->
       <a-entity id="camera" camera wasd-controls look-controls></a-entity>
       <!-- hand controls -->
@@ -1003,18 +1173,49 @@ AFRAME.registerComponent("flyingthree", {
   },
 });
 
-// interaction avec les objets
-    AFRAME.registerComponent("interactable", {
+// interaction avec les objets ancien script
+    // AFRAME.registerComponent("interactable", {
+    //     init: function () {
+    //       // Add event listener for the laser interaction
+    //       // Change the scale of the box on hover
+    //       this.el.addEventListener("mouseenter", () => {
+    //         this.el.setAttribute("scale", "0.011 0.011 0.011");
+    //         this.el.setAttribute("light","color", "#ff7f00", "distance", "30", "intensity", "20", "type", "spot", "decay", "2"); // Visual feedback
+    //       });
+    //       // Reset the scale on mouse leave
+    //       this.el.addEventListener("mouseleave", () => {
+    //         this.el.setAttribute("scale", "0.01 0.01 0.01"); // Reset scale
+    //         this.el.removeAttribute("light"); // Remove the light
+    //       });
+
+    //       // Add event listener for the click interaction
+    //       this.el.addEventListener("click", () => {
+    //         // Get the target entity
+    //         const target = document.querySelector(
+    //           `#${this.el.getAttribute("data-cible")}`
+    //         );
+    //         // Make the target visible
+    //         target.setAttribute("visible", "true");
+
+    //         console.log(target);
+    //       });
+    //     },
+    //   });
+
+      AFRAME.registerComponent("interactable", {
         init: function () {
           // Add event listener for the laser interaction
           // Change the scale of the box on hover
           this.el.addEventListener("mouseenter", () => {
-            this.el.setAttribute("scale", "0.011 0.011 0.011");
-            this.el.setAttribute("light","color", "#ff7f00", "distance", "30", "intensity", "20", "type", "spot", "decay", "2"); // Visual feedback
+            const hoverScale = this.el.getAttribute("data-hover-scale");
+            const lightColor = this.el.getAttribute("data-light-color");
+            this.el.setAttribute("scale", hoverScale);
+            this.el.setAttribute("light", `color: ${lightColor}; distance: 30; intensity: 20; type: spot; decay: 2`); // Visual feedback
           });
           // Reset the scale on mouse leave
           this.el.addEventListener("mouseleave", () => {
-            this.el.setAttribute("scale", "0.01 0.01 0.01"); // Reset scale
+            const originalScale = this.el.getAttribute("scale");
+            this.el.setAttribute("scale", originalScale); // Reset scale
             this.el.removeAttribute("light"); // Remove the light
           });
 
