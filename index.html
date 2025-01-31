@@ -11,58 +11,6 @@
 
   </head>
   <body>
-    <!-- exo 1 <a-scene>
-      <a-box position="0 0.5 -5" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.5 -5" radius="0.5" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="0 2.5 -5" radius="0.5" rotation="90 0 -30" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.5 5"></a-camera>
-    </a-scene> -->
-
-    <!-- exo 2 -->
-
-    <!-- <a-scene>
-        <a-asset>
-            <img id="groundTexture" src="/assets/Moon_texture.jpg" alt="">
-            <img id="normal" src="/assets/normal.jpg" alt="">
-            <img id="sky" src="assets/sky.jpg" alt="">
-        </a-asset>
-
-        <a-sphere 
-            id="moon" 
-            segments-height="53"
-            segments-width="53" 
-            position="0 0 -5" 
-            material="src: #groundTexture; normalMap: #normal" 
-            radius="2" 
-            color="#FFFF" 
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000 easing: linear">
-        </a-sphere>
-        
-        <a-entity 
-            light="type: directional; color: #ff00ff; target: #moon; intensity: 1" 
-            position="1 0 1">
-        </a-entity>
-
-        <a-entity 
-            light="type: directional; color: #ffef; target: #moon; intensity: 1" position="-1 0 1">
-        </a-entity>
-
-        <a-entity 
-            geometry="primitive:sphere; radius:.15"
-            material="color: #fff; shader: flat"
-            light="color:#fff; distance: 120">
-        </a-entity>
-
-        <a-sky src="#sky"></a-sky>
-        
-        <a-camera position="0 0 5"></a-camera>
-    </a-scene> -->
-
-<!-- Exo 3 -->
-
-<!-- fog="type: linear; color: #01766D; near: 1; far: 5" -->
   <a-scene
   >
 
@@ -100,7 +48,8 @@
       <a-asset-item id="socle-mtl2" src="./assets/socle2.mtl"></a-asset-item>
 
       <!-- Audio -->
-      <audio id="music" src="./assets/Smooth and Cool - Nico Staf.mp3" preload="auto"></audio>      
+      <audio id="music" src="./assets/Smooth and Cool - Nico Staf.mp3" preload="auto"></audio>  
+      <audio id="sound" src="./assets/33478__hiccupvirus__original-tron-bike-engine.wav" preload="auto"></audio>    
     </a-asset>
 
     <!-- environnement -->
@@ -208,6 +157,7 @@
       class="clickable"
       data-cible="cible2"
       interactable
+      sound="src: #sound; maxDistance: 15; volume: 0.5 positional: true"
       >
     </a-entity>
 
